@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: mzeeswartpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mzeeswartpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mzeeswartpipelinesjavascriptdocker 
+          image: mzeeswartacr.azurecr.io/mzeeswartpipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
